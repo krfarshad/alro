@@ -14,7 +14,7 @@ const Rate = (props: RateProps) => {
               className="inline-block mx-[2px]"
               key={`star_${index}`}
               size="16"
-              variant="Linear"
+              variant="Bold"
               color={color}
             />
           );
