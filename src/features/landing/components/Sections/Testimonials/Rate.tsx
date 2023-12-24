@@ -3,7 +3,6 @@ import { Star1 } from "iconsax-react";
 type RateProps = Pick<Testimonial, "rate">;
 const Rate = (props: RateProps) => {
   const { rate } = props;
-  console.log("Rate", rate);
   return (
     <>
       {Array(5)

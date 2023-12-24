@@ -1,5 +1,5 @@
 import { postList } from "@/api/postList";
 import useSWR from "swr";
-export const useProjects = () => {
+export const usePosts = () => {
   return useSWR("/api/users", postList);
 };
