@@ -2,6 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: Roboto, sans-serif
+}
+
+@layer base {
+    h1 {
+        @apply text-3xl font-bold;
+    }
+
+    h2 {
+        @apply text-2xl font-bold;
+    }
+
+    h3 {
+        @apply text-xl font-semibold;
+    }
+
+    h4 {
+        @apply text-lg font-semibold;
+    }
+
+    h5 {
+        @apply text-md font-semibold;
+    }
+
+    h6 {
+        @apply text-md font-medium;
+    }
+
+    p {
+        @apply text-sm font-normal;
+    }
+
+    span {
+        @apply text-sm font-normal;
+    }
+}
+
 header .active {
     color: orange
 }
