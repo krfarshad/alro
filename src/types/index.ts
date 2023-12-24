@@ -31,3 +31,20 @@ export interface ProjectItem {
   subTitle: string;
   slug: string;
 }
+
+export interface Testimonial {
+  id: number;
+  image: string;
+  name: string;
+  text: string;
+  rate: number;
+}
+
+export interface Post {
+  id: number;
+  title: string;
+  content: string;
+  slug: string;
+  publishDate: string;
+  thumbnail: string;
+}
