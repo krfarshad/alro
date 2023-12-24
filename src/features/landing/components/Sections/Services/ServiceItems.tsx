@@ -6,7 +6,7 @@ const ServiceItems = () => {
   return (
     <>
       {serviceItems.map((service) => (
-        <ServiceItem item={service} />
+        <ServiceItem key={service.id} item={service} />
       ))}
     </>
   );

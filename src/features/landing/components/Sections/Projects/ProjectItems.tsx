@@ -8,7 +8,11 @@ const ProjectItems = () => {
   if (error) {
     throw new Error("Fetch Error Data");
   }
-  return <Row>{data && data.map((item) => <ProjectItem item={item} />)}</Row>;
+  return (
+    <Row>
+      {data && data.map((item) => <ProjectItem key={item.id} item={item} />)}
+    </Row>
+  );
 };
 
 export default ProjectItems;
