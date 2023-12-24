@@ -5,14 +5,14 @@ import ServiceItems from "./ServiceItems";
 const Services = () => {
   return (
     <section
-      className="py-8 bg-cover bg-center bg-no-repeat"
+      className="pt-20 pb-4 mb-8 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${serviceBg})` }}
     >
       <Container>
         <Title className="text-center text-white" tag="h2">
           Our Services
         </Title>
-        <Title className="text-center text-white" tag="h6">
+        <Title className="text-center text-white" tag="p">
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
         </Title>
         <Row className="mt-4 -mb-20">

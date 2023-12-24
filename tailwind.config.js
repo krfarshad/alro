@@ -8,6 +8,9 @@ export default {
         secondary: "#7B8493",
         title: "#4D545E",
       },
+      fontSize: {
+        md: "16px",
+      },
     },
   },
   plugins: [],
