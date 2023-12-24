@@ -1,15 +1,17 @@
 import clsx from "clsx";
 
-type TitleProps = {
+type TextProps = {
   className?: string;
   tag?: keyof JSX.IntrinsicElements;
   children: string;
 };
-const Title = (props: TitleProps) => {
-  const { className, children, tag = "h1" } = props;
+
+const Text = (props: TextProps) => {
+  const { className, tag = "p", children } = props;
   const CustomTag = `${tag}` as keyof JSX.IntrinsicElements;
-  const classes = clsx("font-bold text-title", className && className);
+  const classes = clsx("font-bold text-secondary", className && className);
+
   return <CustomTag className={classes}>{children}</CustomTag>;
 };
 
-export default Title;
+export default Text;
