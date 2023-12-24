@@ -9,7 +9,7 @@ type TextProps = {
 const Text = (props: TextProps) => {
   const { className, tag = "p", children } = props;
   const CustomTag = `${tag}` as keyof JSX.IntrinsicElements;
-  const classes = clsx("font-bold text-secondary", className && className);
+  const classes = clsx("text-secondary", className && className);
 
   return <CustomTag className={classes}>{children}</CustomTag>;
 };
