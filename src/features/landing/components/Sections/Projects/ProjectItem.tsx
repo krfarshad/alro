@@ -5,7 +5,7 @@ type ProjectItemProp = { item: ProjectItem };
 const ProjectItem = (props: ProjectItemProp) => {
   const { item } = props;
   return (
-    <div className="w-full md:w-1/2">
+    <div className="w-full sm:w-1/2 md:w-1/4">
       <div className="h-80 w-full">
         <Title tag="h3">{item.title}</Title>
         <Text>{item.subTitle}</Text>
