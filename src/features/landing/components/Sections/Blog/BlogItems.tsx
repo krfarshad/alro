@@ -1,7 +1,11 @@
 import { SpinnerLoading } from "@/components";
 import { usePosts } from "@/hooks/usePosts";
-import BlogItem from "./BlogItem";
-
+import BlogCard from "./Card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Scrollbar } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "../../../assets/css/style.css";
 const BlogItems = () => {
   const { data, isLoading, error } = usePosts();
 
@@ -9,8 +13,35 @@ const BlogItems = () => {
   if (error) {
     throw new Error("Fetch Error Data");
   }
+
   return (
-    <>{data && data.map((item) => <BlogItem key={item.id} item={item} />)}</>
+    <Swiper
+      modules={[Navigation, Scrollbar]}
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 24,
+        },
+        776: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        991: {
+          slidesPerView: 3,
+          spaceBetween: 35,
+        },
+      }}
+      scrollbar={{ draggable: true }}
+      navigation
+      className="py-6 px-14"
+    >
+      {data &&
+        data.map((item) => (
+          <SwiperSlide>
+            <BlogCard key={item.id} item={item} />
+          </SwiperSlide>
+        ))}
+    </Swiper>
   );
 };
 

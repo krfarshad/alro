@@ -3,13 +3,13 @@ import { ButtonSize, ButtonType, ButtonVariant } from "./type";
 export const sizeClasses = (size: ButtonSize) => {
   switch (size) {
     case "large": {
-      return "py-3 px-8";
+      return "py-3 px-8 text-lg";
     }
     case "medium": {
-      return "py-2 px-6";
+      return "py-2 px-6 text-md";
     }
     case "small": {
-      return "py-1 px-2";
+      return "py-1 px-2 text-sm";
     }
     default: {
       break;
@@ -39,7 +39,7 @@ export const variantClasses = (variant: ButtonVariant) => {
     case "fill":
       return "text-primary";
     case "outlined":
-      return "";
+      return "border";
     case "text":
       return "";
     case "underlined":

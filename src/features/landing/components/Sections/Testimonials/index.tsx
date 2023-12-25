@@ -3,7 +3,7 @@ import TestimonialItems from "./TestimonialItems";
 
 const Testimonials = () => {
   return (
-    <section className="testimonials py-20">
+    <section className="testimonials py-10">
       <Container>
         <Title className="text-center mb-2" tag="h3">
           Opinions Of Our Customers
