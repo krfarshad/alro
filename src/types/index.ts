@@ -24,13 +24,7 @@ export interface MenuRoute extends Route {
   children?: Route[];
 }
 
-export interface ProjectItem {
-  id: number;
-  title: string;
-  image: string;
-  subTitle: string;
-  slug: string;
-}
+
 
 export interface Testimonial {
   id: number;
