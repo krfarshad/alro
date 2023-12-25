@@ -40,6 +40,6 @@ body {
     }
 }
 
-header .active {
-    color: orange
+header .active::after {
+    opacity: 1 !important;
 }
