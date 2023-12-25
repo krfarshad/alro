@@ -1,5 +1,5 @@
 import { Testimonial } from "@/types";
-import { Star1 } from "iconsax-react";
+import { Star } from "iconsax-react";
 type RateProps = Pick<Testimonial, "rate">;
 const Rate = (props: RateProps) => {
   const { rate } = props;
@@ -10,10 +10,10 @@ const Rate = (props: RateProps) => {
         .map((_, index: number) => {
           const color = rate > index ? "#FFB801" : "#3333";
           return (
-            <Star1
-              className="inline-block mx-[2px]"
+            <Star
+              className="inline-block"
               key={`star_${index}`}
-              size="16"
+              size="18"
               variant="Bold"
               color={color}
             />

@@ -21,7 +21,9 @@ const TestimonialItem = (props: TestimonialItem) => {
       <div>
         {/* image */}
         <TestimonialIcon avatar={item.image} />
-        <Title>{item.name}</Title>
+        <Title tag="p" className="font-bold">
+          {item.name}
+        </Title>
         <Text className="text-[#AEB3BC] my-2">{item.text}</Text>
         <Rate rate={item.rate} />
       </div>
