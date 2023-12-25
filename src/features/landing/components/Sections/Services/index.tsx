@@ -5,11 +5,11 @@ import ServiceItems from "./ServiceItems";
 const Services = () => {
   return (
     <section
-      className="pt-20 pb-4 mb-8 bg-cover bg-center bg-no-repeat"
+      className="pt-28 pb-4 mb-8 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${serviceBg})` }}
     >
       <Container>
-        <Title className="text-center text-white" tag="h2">
+        <Title className="text-center text-white mb-2" tag="h2">
           Our Services
         </Title>
         <Title className="text-center text-white" tag="p">
