@@ -39,12 +39,3 @@ export interface Testimonial {
   text: string;
   rate: number;
 }
-
-export interface Post {
-  id: number;
-  title: string;
-  content: string;
-  slug: string;
-  publishDate: string;
-  thumbnail: string;
-}
