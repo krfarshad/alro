@@ -5,7 +5,7 @@ const Testimonials = () => {
   return (
     <section className="testimonials py-10">
       <Container>
-        <Title className="text-center mb-2" tag="h3">
+        <Title className="text-center mb-2" tag="h2">
           Opinions Of Our Customers
         </Title>
         <Text className="text-center mt-2 mb-4">
