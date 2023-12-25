@@ -11,9 +11,9 @@ type TestimonialItem = {
 const TestimonialItem = (props: TestimonialItem) => {
   const { item, index } = props;
   const classes = clsx(
-    "px-8 py-6 md:py-2 w-full md:w-1/3 text-center",
+    "px-8 py-6 md:py-4 w-full md:w-1/3 text-center group hover:bg-slate-50 transition-all hover:transition-all border-transparent border hover:border hover:border-slate-200",
     index === 1
-      ? "border-y border-x-0 md:border-y-0 md:border-x border-slate-100"
+      ? "border-x-0 md:border-x !border-y-transparent hover:!border-y-slate-200  md:border-slate-200 "
       : ""
   );
   return (
