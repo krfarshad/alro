@@ -2,12 +2,11 @@ import { ArrowRight } from "iconsax-react";
 import { Button, Row, Text, Title } from "@/components";
 import { BlogItemProps } from ".";
 import { Link } from "react-router-dom";
+import { getExcerpt } from "@/utils/getExcerpt";
 
 const Overlay = (props: BlogItemProps) => {
   const { item } = props;
-  const words = item.content?.split(" ");
-  const excerpt = words.slice(0, 15).join(" ");
-
+  const excerpt = getExcerpt(item.content, 15);
   return (
     <>
       <Title tag="h6" className="!font-bold">

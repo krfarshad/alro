@@ -6,7 +6,7 @@ interface TitleProps extends ReactChildren {
   tag?: keyof JSX.IntrinsicElements;
 }
 const Title = (props: TitleProps) => {
-  const { className, children, tag = "p" } = props;
+  const { className, children, tag = "h1" } = props;
   const CustomTag = `${tag}` as keyof JSX.IntrinsicElements;
   const classes = clsx("text-title", className && className);
   return <CustomTag className={classes}>{children}</CustomTag>;

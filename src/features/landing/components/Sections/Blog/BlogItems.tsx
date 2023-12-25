@@ -1,5 +1,5 @@
 import { SpinnerLoading } from "@/components";
-import { usePosts } from "@/hooks/usePosts";
+import { usePosts } from "@/features/blog/hooks/usePosts";
 import BlogCard from "./Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";

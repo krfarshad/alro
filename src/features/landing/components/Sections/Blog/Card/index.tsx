@@ -1,6 +1,6 @@
-import { Post } from "@/types";
 import Thumbnail from "./Thumbnail";
 import Overlay from "./Overlay";
+import { Post } from "@/features/blog";
 
 export type BlogItemProps = {
   item: Post;
