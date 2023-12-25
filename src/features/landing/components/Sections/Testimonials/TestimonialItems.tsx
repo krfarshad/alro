@@ -11,7 +11,9 @@ const TestimonialItems = () => {
   return (
     <>
       {data &&
-        data.map((item) => <TestimonialItem key={item.id} item={item} />)}
+        data.map((item, index) => (
+          <TestimonialItem key={item.id} index={index} item={item} />
+        ))}
     </>
   );
 };
