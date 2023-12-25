@@ -7,7 +7,7 @@ interface ContainerProps extends ReactChildren {
 
 const Container = (props: ContainerProps) => {
   const { children, className } = props;
-  const classes = clsx("mx-auto container", className && className);
+  const classes = clsx("mx-auto container px-6", className && className);
   return <div className={classes}>{children}</div>;
 };
 
