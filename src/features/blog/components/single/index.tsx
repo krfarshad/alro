@@ -16,7 +16,10 @@ const SingleBlog = () => {
       {data && (
         <>
           <Title className="mb-8">{data.title}</Title>
-          <Thumbnail image={data.thumbnail} />
+          <Thumbnail
+            className="min-h-[300px] max-h-[400px] mx-auto w-auto"
+            image={data.thumbnail}
+          />
           <Text className="mt-8">{data.content}</Text>
         </>
       )}

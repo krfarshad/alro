@@ -10,7 +10,7 @@ const BlogCard = (props: BlogItemProps) => {
 
   return (
     <div className="py-10 mb-2">
-      <div className="relative flex items-end p-4 bg-4 bg-white rounded-sm h-56">
+      <div className="relative group transition-all hover:transition-all hover:-translate-y-3 flex items-end p-4 bg-4 bg-white rounded-sm h-56">
         <div className="container rounded-sm overflow-hidden absolute left-0 top-0 w-full h-full">
           <Thumbnail image={item.thumbnail} />
         </div>

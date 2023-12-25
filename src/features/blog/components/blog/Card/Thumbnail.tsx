@@ -2,14 +2,18 @@ import { loadDynamicImage } from "@/utils/loadDynamicImage";
 import { useEffect, useState } from "react";
 import placeholder from "@/assets/images/placeholder.png";
 import { Link } from "react-router-dom";
+import clsx from "clsx";
 
 type Props = {
   image: string;
   link?: string;
+  className?: string;
 };
 const Thumbnail = (props: Props) => {
-  const { image, link } = props;
+  const { image, link, className } = props;
   const [src, setSrc] = useState<string>("");
+  const imgClasses = clsx(className ? className : "h-full w-full");
+
   useEffect(() => {
     const loadImage = async () => {
       try {
@@ -19,7 +23,6 @@ const Thumbnail = (props: Props) => {
         throw new Error("Error loading dynamic image:");
       }
     };
-
     if (!src) {
       loadImage();
     }
@@ -31,14 +34,14 @@ const Thumbnail = (props: Props) => {
         {link ? (
           <Link to={`/blog/${link}`}>
             <img
-              className="w-full h-full"
+              className={imgClasses}
               src={src ? src : placeholder}
               alt="post"
             />
           </Link>
         ) : (
           <img
-            className="w-full h-full"
+            className={imgClasses}
             src={src ? src : placeholder}
             alt="post"
           />
