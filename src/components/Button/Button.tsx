@@ -14,7 +14,7 @@ const Button = forwardRef(
       variant = "fill",
     } = props;
     const classes = clsx(
-      "inline-block rounded-sm outline-none",
+      "inline-block rounded-sm outline-none  hover:transition-all transition-all",
       className && className,
       sizeClasses(size),
       typeClasses(type),
