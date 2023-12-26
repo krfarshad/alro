@@ -1,10 +1,10 @@
 import { Title, Text, Row, Container } from "@/components";
-import introImage from "../../../assets/hero.jpg";
+import introImage from "../../../assets/intro.jpg";
 const Intro = () => {
   return (
-    <Container className="py-28">
+    <Container className="py-16 md:py-32">
       <Row>
-        <div className="w-full md:w-1/2 px-2">
+        <div className="w-full md:w-1/2 pl-2 pr-2 md:pr-12">
           <Title tag="h2" className="mb-4">
             Welcome We Are Alro
           </Title>
