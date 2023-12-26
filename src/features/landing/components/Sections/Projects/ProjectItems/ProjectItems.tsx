@@ -1,5 +1,5 @@
 import { SpinnerLoading } from "@/components";
-import ProjectItem from "./ProjectItem";
+import ProjectItem from "./ProjectCard";
 import { useProjects } from "@/features/projects/hooks/useProjects";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper/modules";

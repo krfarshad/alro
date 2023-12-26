@@ -1,6 +1,6 @@
 import { Button, Container, Row, Title } from "@/components";
-import ProjectItems from "./ProjectItems";
-import ProjectFilters from "./ProjectFilters";
+import ProjectItems from "./ProjectItems/ProjectItems";
+import ProjectFilters from "./ProjectFilters/ProjectFilters";
 import { Link } from "react-router-dom";
 
 const Projects = () => {

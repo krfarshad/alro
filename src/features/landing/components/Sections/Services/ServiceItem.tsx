@@ -31,7 +31,7 @@ const ServiceItem = (props: ServiceItemProp) => {
           <Button
             type="primary"
             variant="outlined"
-            className="border-primary !text-sm"
+            className="border-primary !text-sm hover:bg-primary hover:text-white"
           >
             <Link to={item.slug}>Read more</Link>
           </Button>
