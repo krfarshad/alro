@@ -24,7 +24,10 @@ export interface MenuRoute extends Route {
   children?: Route[];
 }
 
-
+export interface Range {
+  max: number;
+  min: number;
+}
 
 export interface Testimonial {
   id: number;
