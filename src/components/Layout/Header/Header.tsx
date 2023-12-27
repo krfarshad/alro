@@ -6,7 +6,7 @@ import clsx from "clsx";
 const Header = () => {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
-  const classes = clsx("p-4 relative z-30", isHome ? "" : " bg-slate-700");
+  const classes = clsx("p-4 relative z-30", isHome ? "" : " bg-[#3F4348]");
 
   return (
     <header className={classes}>
