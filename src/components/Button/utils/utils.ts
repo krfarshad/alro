@@ -9,7 +9,7 @@ export const sizeClasses = (size: ButtonSize) => {
       return "py-2 px-6 text-md";
     }
     case "small": {
-      return "py-1 px-2 text-sm";
+      return "py-1 px-4 text-sm font-normal";
     }
     default: {
       break;
