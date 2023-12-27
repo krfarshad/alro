@@ -1,10 +1,10 @@
-import { AppRoutes } from "@/router/AppRoutes";
+import { appRoutes } from "@/router/appRoutes";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <ul>
-      {AppRoutes.map((route) => (
+      {appRoutes.map((route) => (
         <li className="inline-block relative" key={route.to}>
           <NavLink
             to={route.to}
