@@ -1,10 +1,10 @@
+import { ReactChildren } from "@/types";
 import clsx from "clsx";
 
-type TextProps = {
+interface TextProps extends ReactChildren {
   className?: string;
   tag?: keyof JSX.IntrinsicElements;
-  children: string;
-};
+}
 
 const Text = (props: TextProps) => {
   const { className, tag = "p", children } = props;
