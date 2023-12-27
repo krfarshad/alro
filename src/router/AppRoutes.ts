@@ -1,6 +1,6 @@
 import { MenuRoute } from "@/types";
 
-export const AppRoutes: MenuRoute[] = [
+export const appRoutes: MenuRoute[] = [
   {
     title: "Home page",
     to: "/",

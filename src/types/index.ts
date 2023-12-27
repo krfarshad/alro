@@ -36,3 +36,13 @@ export interface Testimonial {
   text: string;
   rate: number;
 }
+
+export interface FooterRoute {
+  link: string;
+  text: string;
+  target?: "_blank";
+}
+export interface FooterRouteWidget {
+  title: string;
+  routes: FooterRoute[];
+}
