@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export interface ReactChildren {
   children: ReactNode;
@@ -46,3 +46,5 @@ export interface FooterRouteWidget {
   title: string;
   routes: FooterRoute[];
 }
+
+export type setStateProp<T> = Dispatch<SetStateAction<T>>;

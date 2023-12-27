@@ -4,8 +4,12 @@ import { useProjects } from "@/features/projects/hooks/useProjects";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper/modules";
 import "swiper/css";
+import { useContext } from "react";
+import { FilterContext } from "@/features/projects";
 const ProjectItems = () => {
-  const { data, isLoading, error } = useProjects();
+  const { filters } = useContext(FilterContext);
+  const { data, isLoading, error } = useProjects({ filters: filters });
+
   isLoading && <SpinnerLoading />;
   if (error) {
     throw new Error("Fetch Error Data");

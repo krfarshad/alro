@@ -12,3 +12,10 @@ export interface ProjectItem extends projectEnum {
   description: string;
   slug: string;
 }
+
+export interface ProjectFilter {
+  size?: { min?: number; max?: number };
+  beds?: { min?: number; max?: number };
+  theme?: ("Modern" | "Traditional" | "classical")[];
+  colorScheme: ("Neutral" | "Accent")[];
+}

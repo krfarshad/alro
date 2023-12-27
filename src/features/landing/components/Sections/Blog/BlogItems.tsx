@@ -37,7 +37,7 @@ const BlogItems = () => {
     >
       {data &&
         data.map((item) => (
-          <SwiperSlide>
+          <SwiperSlide key={item.id}>
             <BlogCard key={item.id} item={item} />
           </SwiperSlide>
         ))}
