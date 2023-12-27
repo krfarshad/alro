@@ -21,13 +21,13 @@ const NewsletterForm = () => {
           <input
             type="email"
             placeholder="Enter your email address..."
-            className="shadow-sm text-sm w-[70%] outline-none shadow-slate-300 placeholder:text-gray-400 font-light p-2 rounded-l-md"
+            className="shadow-sm text-sm w-[70%] outline-none shadow-slate-300 placeholder:text-gray-400 font-light p-2 rounded-l-sm"
             required
           />
           <input
             type="submit"
             value="Submit"
-            className="w-20 text-white text-sm border border-primary bg-primary  shadow-slate-300  rounded-r-md p-2 font-light"
+            className="w-20 text-white text-sm border border-primary bg-primary  shadow-slate-300  rounded-r-sm p-2 font-light"
           />
         </form>
       )}

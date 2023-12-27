@@ -1,4 +1,4 @@
-import { appRoutes } from "@/router/appRoutes";
+import { appRoutes } from "@/router/AppRoutes";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {

@@ -4,9 +4,9 @@ import NewsletterForm from "./NewsletterForm";
 
 const Newsletter = () => {
   return (
-    <div className="-mt-20  bg-white shadow-sm shadow-slate-500 mb-4 p-2 rounded-sm">
+    <div className="-mt-20 mb-8 bg-white shadow-sm shadow-slate-500  p-2 rounded-sm">
       <Row className="items-center">
-        <div className="p-2 w-full md:w-1/2">
+        <div className="p-2 w-full md:w-1/2 text-center md:text-left">
           <Title tag="h6">Newsletters</Title>
           <Text>Get latest news and discounts</Text>
         </div>
