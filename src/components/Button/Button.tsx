@@ -1,10 +1,19 @@
 import clsx from "clsx";
-import { ForwardedRef, forwardRef } from "react";
+import {
+  ButtonHTMLAttributes,
+  ForwardedRef,
+  HTMLProps,
+  forwardRef,
+} from "react";
 import { ButtonProps } from "./utils/type";
 import { sizeClasses, typeClasses, variantClasses } from "./utils/utils";
 
+interface ExtendedButtonProps
+  extends ButtonProps,
+    ButtonHTMLAttributes<HTMLButtonElement> {}
+
 const Button = forwardRef(
-  (props: ButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
+  (props: ExtendedButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
     const {
       children,
       className,
@@ -12,6 +21,7 @@ const Button = forwardRef(
       type,
       size = "medium",
       variant = "fill",
+      ...params
     } = props;
     const classes = clsx(
       "inline-block rounded-sm outline-none  hover:transition-all transition-all",
@@ -21,7 +31,7 @@ const Button = forwardRef(
       variantClasses(variant)
     );
     return (
-      <button className={classes} ref={ref} disabled={disable}>
+      <button className={classes} ref={ref} disabled={disable} {...params}>
         {children}
       </button>
     );

@@ -9,14 +9,14 @@ export interface LoadingButtonProps extends ReactChildren {
   className?: string;
   disable?: boolean;
   type: ButtonType;
-  size?: ButtonSize;
+  size: ButtonSize | undefined;
   variant?: ButtonVariant;
 }
 
 export interface ButtonProps extends ReactChildren {
+  size?: ButtonSize;
   className?: string;
   disable?: boolean;
   type: ButtonType;
-  size?: ButtonSize;
   variant?: ButtonVariant;
 }
