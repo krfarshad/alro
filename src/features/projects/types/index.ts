@@ -1,8 +1,11 @@
+export type FilterThemeEnum = "Modern" | "Traditional" | "classical";
+
+export type FilterColorSchemeEnum = "Neutral" | "Accent";
 export interface projectEnum {
   size: number;
   beds: number;
-  theme: "Modern" | "Traditional" | "classical";
-  colorScheme: "Neutral" | "Accent";
+  theme: FilterThemeEnum;
+  colorScheme: FilterColorSchemeEnum;
 }
 export interface ProjectItem extends projectEnum {
   id: number;
@@ -13,9 +16,20 @@ export interface ProjectItem extends projectEnum {
   slug: string;
 }
 
-export interface ProjectFilter {
-  size?: { min?: number; max?: number };
-  beds?: { min?: number; max?: number };
-  theme?: ("Modern" | "Traditional" | "classical")[];
-  colorScheme: ("Neutral" | "Accent")[];
+export interface SizeFilterProject {
+  size: { min: number; max: number };
 }
+export interface BedsFilterProject {
+  beds: { min: number; max: number };
+}
+export interface ThemeFilterProject {
+  theme: FilterThemeEnum[];
+}
+export interface ColorFilterProject {
+  colorScheme: FilterColorSchemeEnum[];
+}
+export interface ProjectFilter
+  extends SizeFilterProject,
+    BedsFilterProject,
+    ThemeFilterProject,
+    ColorFilterProject {}
