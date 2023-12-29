@@ -7,5 +7,5 @@ type Props = {
 export const useProjects = (props: Props) => {
   const { filters } = props;
   const key = filters ? ["/api/projects", filters] : "/api/projects";
-  return useSWR(key, () => projectList(filters));
+  return useSWR(key, async () => await projectList(filters));
 };
