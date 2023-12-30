@@ -9,9 +9,10 @@ import { Empty } from "@/components";
 const ProjectItems = () => {
   const { filters } = useContext(FilterContext);
   const { data, isLoading, error } = useProjects({ filters: filters });
-  console.log(data);
-
-  isLoading && <FilterLoading />;
+  console.log("isLoading", isLoading);
+  if (isLoading) {
+    return <FilterLoading />;
+  }
 
   if (error) {
     throw new Error("Fetch Error Data");
