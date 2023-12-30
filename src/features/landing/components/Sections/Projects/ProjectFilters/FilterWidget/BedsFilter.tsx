@@ -1,15 +1,13 @@
 import { RangeInput } from "@/components";
 import { FilterContext } from "@/features/projects";
 import { Range } from "@/types";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 const BedsFilter = () => {
   const { filters, setFilters } = useContext(FilterContext);
-  const [value, setValue] = useState<Range>(filters.beds);
 
   const handleChange = (newValue: Range | number) => {
-    setValue(newValue as Range);
-    setFilters({ ...filters, beds: value });
+    setFilters({ ...filters, beds: newValue as Range });
   };
 
   return (
@@ -17,7 +15,7 @@ const BedsFilter = () => {
       step={1}
       minValue={1}
       maxValue={4}
-      value={value}
+      value={filters.beds}
       onChange={(newValue) => handleChange(newValue)}
     />
   );

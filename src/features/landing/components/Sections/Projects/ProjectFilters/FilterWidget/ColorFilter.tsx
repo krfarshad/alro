@@ -1,27 +1,27 @@
 import { Checkbox, Row } from "@/components";
 import { FilterColorSchemeEnum, FilterContext } from "@/features/projects";
-import { ChangeEvent, useContext, useState } from "react";
+import { ChangeEvent, useContext } from "react";
 
 const ColorFilter = () => {
   const { filters, setFilters } = useContext(FilterContext);
-  const [colors, setColors] = useState(filters.colorScheme);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const checked = e.target.checked;
     const value = e.target.value as FilterColorSchemeEnum;
 
     if (checked) {
-      const updatedColors = [...colors, value];
-      setColors(updatedColors);
+      const updatedColors = [...filters.colorScheme, value];
       const updatedFilters = { ...filters, colorScheme: updatedColors };
       setFilters(updatedFilters);
     } else {
-      const updatedColors = colors.filter((item) => item !== value);
-      setColors(updatedColors);
+      const updatedColors = filters.colorScheme.filter(
+        (item) => item !== value
+      );
       const updatedFilters = { ...filters, colorScheme: updatedColors };
       setFilters(updatedFilters);
     }
   };
+
   return (
     <Row>
       <Checkbox
@@ -29,14 +29,14 @@ const ColorFilter = () => {
         name="colorScheme"
         value="Neutral"
         onChange={handleChange}
-        checked={colors.includes("Neutral")}
+        checked={filters.colorScheme.includes("Neutral")}
       />
       <Checkbox
         label="Accent"
         name="colorScheme"
         value="Accent"
         onChange={handleChange}
-        checked={colors.includes("Accent")}
+        checked={filters.colorScheme.includes("Accent")}
       />
     </Row>
   );
