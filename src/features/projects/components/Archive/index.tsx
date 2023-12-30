@@ -1,5 +1,15 @@
+import { Container, Title } from "@/components";
+import ProjectItems from "./ProjectItems";
+
 const Archive = () => {
-  return <div>Archive</div>;
+  return (
+    <Container>
+      <Title tag="h1" className="text-center my-2">
+        Projects
+      </Title>
+      <ProjectItems />
+    </Container>
+  );
 };
 
 export default Archive;

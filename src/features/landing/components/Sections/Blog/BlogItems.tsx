@@ -9,7 +9,10 @@ import "../../../assets/css/style.css";
 const BlogItems = () => {
   const { data, isLoading, error } = usePosts();
 
-  isLoading && <SpinnerLoading />;
+  if (isLoading) {
+    return <SpinnerLoading />;
+  }
+
   if (error) {
     throw new Error("Fetch Error Data");
   }

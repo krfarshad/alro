@@ -7,13 +7,16 @@ const SingleBlog = () => {
   const { slug } = useParams();
   const { data, isLoading, error } = usePost(slug);
 
-  isLoading && <SpinnerLoading />;
+  if (isLoading) {
+    return <SpinnerLoading />;
+  }
+
   if (error) {
     throw new Error("Fetch Error Data");
   }
   return (
     <Container className="my-4">
-      {data && (
+      {data ? (
         <>
           <Title className="mb-8">{data.title}</Title>
           <Thumbnail
@@ -22,7 +25,7 @@ const SingleBlog = () => {
           />
           <Text className="mt-8">{data.content}</Text>
         </>
-      )}
+      ) : null}
     </Container>
   );
 };

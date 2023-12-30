@@ -10,8 +10,10 @@ const NewsletterForm = () => {
   return (
     <>
       {submited ? (
-        <Text className="text-green-700 text-center">
-          Thank you very much. your email has registered.
+        <Text className="!text-white bg-green-700 rounded-sm text-center">
+          Thank you for subscribing to our newsletter! You will receive a
+          confirmation email shortly. Please click the confirmation link to
+          complete the subscription process.
         </Text>
       ) : (
         <form
