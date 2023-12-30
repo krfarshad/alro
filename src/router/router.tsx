@@ -7,6 +7,8 @@ import HomePage from "@/pages/home/HomePage";
 import notFoundPage from "@/pages/notFound/notFoundPage";
 import ServicesPage from "@/pages/services";
 import { createBrowserRouter } from "react-router-dom";
+import ProjectSingle from "@/pages/projects/[:slug]";
+import ProjectsPage from "@/pages/projects";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +37,16 @@ export const router = createBrowserRouter([
       {
         path: "/blog/:slug",
         Component: SinglePage,
+        errorElement: <ErrorBoundary />,
+      },
+      {
+        path: "/projects",
+        Component: ProjectsPage,
+        errorElement: <ErrorBoundary />,
+      },
+      {
+        path: "/projects/:slug",
+        Component: ProjectSingle,
         errorElement: <ErrorBoundary />,
       },
     ],

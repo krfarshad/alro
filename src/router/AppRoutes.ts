@@ -7,14 +7,18 @@ export const appRoutes: MenuRoute[] = [
   },
   {
     title: "Blog",
-    to: "/blog",
+    to: "/blog/",
   },
   {
     title: "About us",
-    to: "/about",
+    to: "/about/",
   },
   {
     title: "Services",
-    to: "/services",
+    to: "/services/",
+  },
+  {
+    title: "Projects",
+    to: "/projects/",
   },
 ];
