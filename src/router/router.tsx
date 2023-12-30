@@ -1,10 +1,10 @@
 import { Layout } from "@/components";
 import { ErrorBoundary } from "@/features/errorBoundary";
-import AboutPage from "@/pages/about/AboutPage";
+import AboutPage from "@/pages/about";
 import BlogPage from "@/pages/blog";
 import SinglePage from "@/pages/blog/[:slug]";
-import HomePage from "@/pages/home/HomePage";
-import notFoundPage from "@/pages/notFound/notFoundPage";
+import HomePage from "@/pages/home";
+import notFoundPage from "@/pages/notFound";
 import ServicesPage from "@/pages/services";
 import { createBrowserRouter } from "react-router-dom";
 import ProjectSingle from "@/pages/projects/[:slug]";
@@ -49,10 +49,10 @@ export const router = createBrowserRouter([
         Component: ProjectSingle,
         errorElement: <ErrorBoundary />,
       },
+      {
+        path: "*",
+        Component: notFoundPage,
+      },
     ],
-  },
-  {
-    path: "*",
-    Component: notFoundPage,
   },
 ]);
