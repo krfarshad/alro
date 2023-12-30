@@ -43,3 +43,24 @@ body {
 header .active::after {
     opacity: 1 !important;
 }
+
+.input-range .input-range__label-container {
+    font-size: 11px !important;
+}
+
+.input-range__track.input-range__track--active {
+    background: #AE9576 !important;
+    background-color: #AE9576 !important;
+    height: 2px !important;
+}
+
+.input-range__slider {
+    background: #AE9576 !important;
+    border-color: #AE9576 !important;
+    ;
+}
+
+.input-range__label--value {
+    top: -2rem !important;
+    color: #AE9576 !important;
+}
