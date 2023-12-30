@@ -1,10 +1,9 @@
-import ProjectItem from "./ProjectCard";
 import { useProjects } from "@/features/projects/hooks/useProjects";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper/modules";
 import "swiper/css";
 import { useContext } from "react";
-import { FilterContext, FilterLoading } from "@/features/projects";
+import { FilterContext, FilterLoading, ProjectCard } from "@/features/projects";
 import { Empty } from "@/components";
 const ProjectItems = () => {
   const { filters } = useContext(FilterContext);
@@ -40,8 +39,8 @@ const ProjectItems = () => {
           className="py-6 px-14"
         >
           {data.map((item) => (
-            <SwiperSlide>
-              <ProjectItem key={item.id} item={item} />
+            <SwiperSlide key={item.id}>
+              <ProjectCard project={item} />
             </SwiperSlide>
           ))}
         </Swiper>
