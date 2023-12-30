@@ -1,7 +1,7 @@
 import useSWR, { SWRResponse } from "swr";
 import { getProject } from "../api/getProject";
 import { ProjectItem } from "..";
-export const usePost = (
+export const useProject = (
   slug: string | undefined
 ): SWRResponse<ProjectItem | undefined, any, any> => {
   const fetcher = async () => {

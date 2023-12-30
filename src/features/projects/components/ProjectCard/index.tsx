@@ -1,6 +1,6 @@
 import Thumbnail from "./Thumbnail";
 import Content from "./Content";
-import { ProjectItem } from "../../../../types";
+import { ProjectItem } from "../../types";
 import { ReactChildrenOptional } from "@/types";
 
 export interface ProjectItemProp extends ReactChildrenOptional {

@@ -1,6 +1,6 @@
 import { Row, SpinnerLoading } from "@/components";
 import { useProjects } from "../../../hooks/useProjects";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../../ProjectCard";
 
 const ProjectItems = () => {
   const { data, isLoading, error } = useProjects({});

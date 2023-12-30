@@ -1,13 +1,15 @@
 import { loadDynamicImage } from "@/utils/loadDynamicImage";
 import { useEffect, useState } from "react";
 import placeholder from "@/assets/images/placeholder.png";
+import clsx from "clsx";
 
 type Props = {
   image: string;
+  className?: string;
 };
 
 const Thumbnail = (props: Props) => {
-  const { image } = props;
+  const { image, className } = props;
   const [src, setSrc] = useState<string>("");
   useEffect(() => {
     const loadImage = async () => {
@@ -25,10 +27,10 @@ const Thumbnail = (props: Props) => {
       loadImage();
     }
   }, [src, image]);
-
+  const classes = clsx(className ? className : "w-full h-full");
   return (
-    <div className="w-full h-full">
-      <img className="w-full h-full" src={src ? src : placeholder} alt="post" />
+    <div className={classes}>
+      <img className={classes} src={src ? src : placeholder} alt="post" />
     </div>
   );
 };

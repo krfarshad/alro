@@ -13,7 +13,7 @@ const SingleBlog = () => {
   }
   return (
     <Container className="my-4">
-      {data && (
+      {data ? (
         <>
           <Title className="mb-8">{data.title}</Title>
           <Thumbnail
@@ -22,7 +22,7 @@ const SingleBlog = () => {
           />
           <Text className="mt-8">{data.content}</Text>
         </>
-      )}
+      ) : null}
     </Container>
   );
 };
