@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const MoreButton = () => {
   return (
     <div className="text-right">
-      <Button type="primary" variant="underlined" size="small">
+      <Button color="primary" variant="underlined" size="small">
         <Link to="/projects/">View All</Link>
       </Button>
     </div>

@@ -22,7 +22,7 @@ const Hero = () => {
           </div>
           <div className="more text-right mt-8">
             <Button
-              type="primary"
+              color="primary"
               className="!text-sm !text-white group hover:!text-primary"
             >
               <Link className="flex justify-center" to="/about/">

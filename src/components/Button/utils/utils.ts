@@ -1,4 +1,4 @@
-import { ButtonSize, ButtonType, ButtonVariant } from "./type";
+import { ButtonSize, ButtonColor, ButtonVariant } from "./type";
 
 export const sizeClasses = (size: ButtonSize) => {
   switch (size) {
@@ -17,8 +17,8 @@ export const sizeClasses = (size: ButtonSize) => {
   }
 };
 
-export const typeClasses = (type: ButtonType) => {
-  switch (type) {
+export const colorClasses = (color: ButtonColor) => {
+  switch (color) {
     case "primary":
       return "text-primary";
     case "success":

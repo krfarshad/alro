@@ -29,7 +29,7 @@ const ServiceItem = (props: ServiceItemProp) => {
         </Text>
         <div className="text-center mt-3">
           <Button
-            type="primary"
+            color="primary"
             variant="outlined"
             size="small"
             className="border-primary hover:bg-primary hover:text-white"

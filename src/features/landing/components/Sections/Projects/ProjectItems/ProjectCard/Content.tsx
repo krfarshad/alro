@@ -15,7 +15,7 @@ const Content = (props: ProjectItemProp) => {
         </Title>
         <Text className="w-full text-xs my-2 text-[#D0D4D9]">{subTitle}</Text>
         <Button
-          type="primary"
+          color="primary"
           variant="outlined"
           className="mt-4 border-primary hover:bg-primary hover:text-white !px-12 hidden group-hover:block mx-auto transition-all"
           size="small"

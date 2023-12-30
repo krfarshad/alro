@@ -21,7 +21,7 @@ const Overlay = (props: BlogItemProps) => {
         </div>
         <div className="more">
           <Button
-            type="primary"
+            color="primary"
             className="!text-sm border border-transparent group-hover:border-primary group-hover:border"
           >
             <Link className="flex justify-center" to={`/blog/${item.slug}`}>
