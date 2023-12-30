@@ -21,4 +21,8 @@ export const appRoutes: MenuRoute[] = [
     title: "Projects",
     to: "/projects/",
   },
+  {
+    title: "Not Found",
+    to: "/111/",
+  },
 ];
