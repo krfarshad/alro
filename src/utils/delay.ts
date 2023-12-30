@@ -1,3 +1,3 @@
 export const delay = async (time?: number): Promise<void> => {
-  await setTimeout(() => {}, time ?? 1000);
+  return new Promise((resolve) => setTimeout(resolve, time ?? 1000));
 };

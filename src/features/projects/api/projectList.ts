@@ -7,9 +7,9 @@ import { filterProject } from "../utils/filterProject";
 export const projectList = async (
   filters?: ProjectFilter | null
 ): Promise<ProjectItem[] | null> => {
+  await delay(500);
   if (filters) {
     const projects = await filterProject(filters);
-    await delay(1000);
     return projects;
   }
   return allProjects;
