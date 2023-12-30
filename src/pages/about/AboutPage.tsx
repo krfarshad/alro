@@ -1,5 +1,7 @@
+import { About } from "@/features/view";
+
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return <About />;
 };
 
 export default AboutPage;
