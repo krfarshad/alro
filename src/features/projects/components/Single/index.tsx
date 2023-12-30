@@ -10,6 +10,7 @@ const Single = () => {
   if (isLoading) {
     return <SpinnerLoading />;
   }
+
   if (error) {
     throw new Error("Fetch Error Data");
   }

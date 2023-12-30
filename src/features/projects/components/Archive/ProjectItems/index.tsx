@@ -5,7 +5,9 @@ import ProjectCard from "../../ProjectCard";
 const ProjectItems = () => {
   const { data, isLoading, error } = useProjects({});
 
-  isLoading && <SpinnerLoading />;
+  if (isLoading) {
+    return <SpinnerLoading />;
+  }
 
   if (error) {
     throw new Error("Fetch Error Data");

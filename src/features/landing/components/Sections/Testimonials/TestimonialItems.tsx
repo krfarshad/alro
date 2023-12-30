@@ -4,7 +4,11 @@ import TestimonialItem from "./TestimonialItem";
 
 const TestimonialItems = () => {
   const { data, isLoading, error } = useTestimonials();
-  isLoading && <SpinnerLoading />;
+
+  if (isLoading) {
+    return <SpinnerLoading />;
+  }
+
   if (error) {
     throw new Error("Fetch Error Data");
   }

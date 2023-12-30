@@ -7,7 +7,10 @@ const SingleBlog = () => {
   const { slug } = useParams();
   const { data, isLoading, error } = usePost(slug);
 
-  isLoading && <SpinnerLoading />;
+  if (isLoading) {
+    return <SpinnerLoading />;
+  }
+
   if (error) {
     throw new Error("Fetch Error Data");
   }

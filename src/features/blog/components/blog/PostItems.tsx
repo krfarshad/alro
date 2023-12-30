@@ -4,7 +4,10 @@ import Card from "./Card";
 const PostItems = () => {
   const { data, isLoading, error } = usePosts();
 
-  isLoading && <SpinnerLoading />;
+  if (isLoading) {
+    return <SpinnerLoading />;
+  }
+
   if (error) {
     throw new Error("Fetch Error Data");
   }
