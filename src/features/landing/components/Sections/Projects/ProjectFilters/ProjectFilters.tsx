@@ -3,6 +3,7 @@ import BedsFilter from "./FilterWidget/BedsFilter";
 import ColorFilter from "./FilterWidget/ColorFilter";
 import SizeFilter from "./FilterWidget/SizeFilter";
 import ThemeFilter from "./FilterWidget/ThemeFilter";
+import RemoveFilter from "./RemoveFilter";
 
 const ProjectFilters = () => {
   const filterItems = [
@@ -28,6 +29,9 @@ const ProjectFilters = () => {
       {filterItems.map((item) => (
         <FilterWidget title={item.title}>{item.cm}</FilterWidget>
       ))}
+      <div className="mt-4">
+        <RemoveFilter />
+      </div>
     </div>
   );
 };
