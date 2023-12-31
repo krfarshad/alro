@@ -27,7 +27,9 @@ const ProjectFilters = () => {
   return (
     <div className="p-2">
       {filterItems.map((item) => (
-        <FilterWidget title={item.title}>{item.cm}</FilterWidget>
+        <FilterWidget key={item.title} title={item.title}>
+          {item.cm}
+        </FilterWidget>
       ))}
       <div className="mt-4">
         <RemoveFilter />
