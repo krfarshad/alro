@@ -1,18 +1,12 @@
 import { ReactChildren, setStateProp } from "@/types";
 import { createContext, useState } from "react";
 import { ProjectFilter } from "..";
+import { defaultFilter } from "../utils/defaultFilter";
 
 interface FilterContextProps {
   filters: ProjectFilter;
   setFilters: setStateProp<ProjectFilter>;
 }
-
-export const defaultFilter: ProjectFilter = {
-  size: { min: 50, max: 500 },
-  beds: { min: 0, max: 4 },
-  theme: ["Modern", "Traditional", "classical"],
-  colorScheme: ["Neutral", "Accent"],
-};
 
 export const FilterContext = createContext<FilterContextProps>({
   filters: defaultFilter,
