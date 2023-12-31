@@ -1,0 +1,16 @@
+.blog .swiper-button-prev:after,
+.blog .swiper-button-next:after {
+    font-size: 16px !important;
+    color: #333;
+}
+
+.blog .swiper-button-prev,
+.blog .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F4F5;
+    border-radius: 50%;
+}

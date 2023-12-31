@@ -2,6 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-header .active {
-    color: orange
+body {
+    font-family: Roboto, sans-serif
+}
+
+@layer base {
+    h1 {
+        @apply text-4xl font-bold leading-10;
+    }
+
+    h2 {
+        @apply text-3xl font-bold leading-9;
+    }
+
+    h3 {
+        @apply text-2xl font-semibold leading-8;
+    }
+
+    h4 {
+        @apply text-xl font-semibold leading-8;
+    }
+
+    h5 {
+        @apply text-lg font-semibold leading-8;
+    }
+
+    h6 {
+        @apply text-md font-medium leading-7;
+    }
+
+    p {
+        @apply text-sm font-normal leading-7;
+    }
+
+    span {
+        @apply text-sm font-normal leading-7;
+    }
+}
+
+header .active::after {
+    opacity: 1 !important;
+}
+
+.input-range .input-range__label-container {
+    font-size: 11px !important;
+}
+
+.input-range__track.input-range__track--active {
+    background: #AE9576 !important;
+    background-color: #AE9576 !important;
+    height: 2px !important;
+}
+
+.input-range__slider {
+    background: #AE9576 !important;
+    border-color: #AE9576 !important;
+    ;
+}
+
+.input-range__label--value {
+    top: -2rem !important;
+    color: #AE9576 !important;
+}
+
+.custom-animate-bounce {
+    animation: bounce-animation 0.5s infinite;
+    ;
+}
+
+@keyframes bounce-animation {
+
+    0%,
+    100% {
+        transform: translateY(-80%);
+        animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, .2, 1);
+    }
+}
+
+.animate-delay {
+    animation-delay: .8s;
 }

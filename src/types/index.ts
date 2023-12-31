@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export interface ReactChildren {
   children: ReactNode;
@@ -23,3 +23,28 @@ export interface Route {
 export interface MenuRoute extends Route {
   children?: Route[];
 }
+
+export interface Range {
+  max: number;
+  min: number;
+}
+
+export interface Testimonial {
+  id: number;
+  image: string;
+  name: string;
+  text: string;
+  rate: number;
+}
+
+export interface FooterRoute {
+  link: string;
+  text: string;
+  target?: "_blank";
+}
+export interface FooterRouteWidget {
+  title: string;
+  routes: FooterRoute[];
+}
+
+export type setStateProp<T> = Dispatch<SetStateAction<T>>;

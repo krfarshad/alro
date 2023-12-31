@@ -1,16 +1,28 @@
 import { MenuRoute } from "@/types";
 
-export const AppRoutes: MenuRoute[] = [
+export const appRoutes: MenuRoute[] = [
   {
     title: "Home page",
     to: "/",
   },
   {
-    title: "About us",
-    to: "/about",
+    title: "Blog",
+    to: "/blog/",
   },
   {
-    title: "Contact us",
-    to: "/contact",
+    title: "About us",
+    to: "/about/",
+  },
+  {
+    title: "Services",
+    to: "/services/",
+  },
+  {
+    title: "Projects",
+    to: "/projects/",
+  },
+  {
+    title: "Not Found",
+    to: "/111/",
   },
 ];

@@ -1,0 +1,16 @@
+label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #ae9576;
+  transition: all 0.3s;
+  margin-bottom: -1.5px;
+}
+input[type="checkbox"] {
+  visibility: hidden;
+  opacity: 0;
+}
+input[type="checkbox"]:checked ~ label::before {
+  background-color: #ae9576;
+}
