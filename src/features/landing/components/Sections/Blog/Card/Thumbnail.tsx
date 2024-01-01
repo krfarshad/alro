@@ -1,31 +1,20 @@
-import { loadDynamicImage } from "@/utils/loadDynamicImage";
-import { useEffect, useState } from "react";
 import placeholder from "@/assets/images/placeholder.png";
+import { useDynamicImage } from "@/hooks/useDynamicImage";
 
 type Props = {
   image: string;
 };
 const Thumbnail = (props: Props) => {
   const { image } = props;
-  const [src, setSrc] = useState<string>("");
-  useEffect(() => {
-    const loadImage = async () => {
-      try {
-        const res = await loadDynamicImage(`/src/assets/images/${image}`);
-        setSrc(res);
-      } catch (err) {
-        throw new Error("Error loading dynamic image:");
-      }
-    };
-
-    if (!src) {
-      loadImage();
-    }
-  }, [src, image]);
+  const [imageSrc] = useDynamicImage(image);
 
   return (
     <div className="w-full h-full">
-      <img className="w-full h-full" src={src ? src : placeholder} alt="post" />
+      <img
+        className="w-full h-full"
+        src={imageSrc ? imageSrc : placeholder}
+        alt="post"
+      />
     </div>
   );
 };

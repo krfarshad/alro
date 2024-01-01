@@ -10,7 +10,6 @@ type Props = {
 const Card = (props: Props) => {
   const { post } = props;
   const excerpt = getExcerpt(post.content, 40);
-
   return (
     <div className="p-2 w-full md:w-1/2 lg:w-1/4">
       <div className=" border-slate-200 border transition-all hover:transition-all bg-white hover:shadow-md hover:shadow-slate-200">

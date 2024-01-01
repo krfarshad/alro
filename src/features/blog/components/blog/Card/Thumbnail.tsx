@@ -1,32 +1,18 @@
-import { loadDynamicImage } from "@/utils/loadDynamicImage";
-import { useEffect, useState } from "react";
 import placeholder from "@/assets/images/placeholder.png";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
-
+import { useDynamicImage } from "@/hooks/useDynamicImage";
 type Props = {
   image: string;
   link?: string;
   className?: string;
 };
+
 const Thumbnail = (props: Props) => {
   const { image, link, className } = props;
-  const [src, setSrc] = useState<string>("");
-  const imgClasses = clsx(className ? className : "h-full w-full");
+  const [imageSrc] = useDynamicImage(image);
 
-  useEffect(() => {
-    const loadImage = async () => {
-      try {
-        const res = await loadDynamicImage(`/src/assets/images/${image}`);
-        setSrc(res);
-      } catch (err) {
-        throw new Error("Error loading dynamic image:");
-      }
-    };
-    if (!src) {
-      loadImage();
-    }
-  }, [src, image]);
+  const imgClasses = clsx(className ? className : "h-full w-full");
 
   return (
     <div className="w-full h-auto">
@@ -35,14 +21,14 @@ const Thumbnail = (props: Props) => {
           <Link to={`/blog/${link}`}>
             <img
               className={imgClasses}
-              src={src ? src : placeholder}
+              src={imageSrc ? imageSrc : placeholder}
               alt="post"
             />
           </Link>
         ) : (
           <img
             className={imgClasses}
-            src={src ? src : placeholder}
+            src={imageSrc ? imageSrc : placeholder}
             alt="post"
           />
         )}
