@@ -1,6 +1,6 @@
 import { Button, Text, Title } from "@/components";
 import { Service } from "../../../types";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ServiceIcon from "./ServiceIcon";
 
 type ServiceItemProp = {
@@ -8,6 +8,9 @@ type ServiceItemProp = {
 };
 const ServiceItem = (props: ServiceItemProp) => {
   const { item } = props;
+  const { pathname } = useLocation();
+
+  const isServicesPage = pathname.startsWith("/services");
   return (
     <div className=" w-full md:w-1/4 p-2 mt-4">
       <div
@@ -27,16 +30,18 @@ const ServiceItem = (props: ServiceItemProp) => {
         >
           {item.text}
         </Text>
-        <div className="text-center mt-3">
-          <Button
-            color="primary"
-            variant="outlined"
-            size="small"
-            className="border-primary hover:bg-primary hover:text-white"
-          >
-            <Link to="/services/" >Read more</Link>
-          </Button>
-        </div>
+        {!isServicesPage && (
+          <div className="text-center mt-3">
+            <Button
+              color="primary"
+              variant="outlined"
+              size="small"
+              className="border-primary hover:bg-primary hover:text-white"
+            >
+              <Link to="/services/">Read more</Link>
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
