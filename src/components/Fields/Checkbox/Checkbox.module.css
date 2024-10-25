@@ -6,6 +6,9 @@ label::before {
   border: 1px solid #ae9576;
   transition: all 0.3s;
   margin-bottom: -1.5px;
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  margin-right: 2px;
 }
 input[type="checkbox"] {
   visibility: hidden;
@@ -13,4 +16,5 @@ input[type="checkbox"] {
 }
 input[type="checkbox"]:checked ~ label::before {
   background-color: #ae9576;
+  outline: 1px solid #ae9576;
 }
