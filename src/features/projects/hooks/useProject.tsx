@@ -1,9 +1,7 @@
-import useSWR, { SWRResponse } from "swr";
+import useSWR from "swr";
 import { getProject } from "../api/getProject";
-import { ProjectItem } from "..";
-export const useProject = (
-  slug: string | undefined
-): SWRResponse<ProjectItem | undefined, any, any> => {
+
+export const useProject = (slug: string | undefined) => {
   const fetcher = async () => {
     const result = await getProject(slug);
     return result;

@@ -2,6 +2,7 @@ import { Container, Row, SpinnerLoading, Text, Title } from "@/components";
 import { useParams } from "react-router";
 import { useProject } from "../../hooks/useProject";
 import Thumbnail from "../ProjectCard/Thumbnail";
+import { NotFound } from "@/features/view";
 
 const Single = () => {
   const { slug } = useParams();
@@ -15,6 +16,9 @@ const Single = () => {
     throw new Error("Fetch Error Data");
   }
 
+  if (data === null) {
+    return <NotFound />;
+  }
   return (
     <Container className="py-8">
       {data ? (
