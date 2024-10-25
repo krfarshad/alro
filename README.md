@@ -39,10 +39,9 @@ This project leverages several powerful libraries and tools:
 
 ## 🔗 Links
 
-[![Portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/krfarshad/){:target="\_blank"}
-
-[![LinkedIn](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farshadkr/){:target="\_blank"}
+[![LinkedIn](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farshadkr/)
 
 ## Demo
 
-[https://alro-three.vercel.app/](https://alro-three.vercel.app/){:target="\_blank"}
+The project is live! Check it out on Vercel
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Visit Website demo</a>
