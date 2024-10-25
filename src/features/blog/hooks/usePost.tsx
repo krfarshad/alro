@@ -1,9 +1,7 @@
-import useSWR, { SWRResponse } from "swr";
+import useSWR from "swr";
 import { getPost } from "../api/getPost";
-import { Post } from "..";
-export const usePost = (
-  slug: string | undefined
-): SWRResponse<Post | undefined, any, any> => {
+
+export const usePost = (slug: string | undefined) => {
   const fetcher = async () => {
     const result = await getPost(slug);
     return result;

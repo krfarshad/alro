@@ -2,6 +2,7 @@ import { Container, SpinnerLoading, Text, Title } from "@/components";
 import { useParams } from "react-router-dom";
 import { usePost } from "../../hooks/usePost";
 import Thumbnail from "../blog/Card/Thumbnail";
+import { NotFound } from "@/features/view";
 
 const SingleBlog = () => {
   const { slug } = useParams();
@@ -13,6 +14,10 @@ const SingleBlog = () => {
 
   if (error) {
     throw new Error("Fetch Error Data");
+  }
+
+  if (data == null) {
+    return <NotFound />;
   }
   return (
     <Container className="my-4">
