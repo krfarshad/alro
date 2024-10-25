@@ -34,7 +34,7 @@ const ServiceItem = (props: ServiceItemProp) => {
             size="small"
             className="border-primary hover:bg-primary hover:text-white"
           >
-            <Link to="/services/">Read more</Link>
+            <Link to="/services/" >Read more</Link>
           </Button>
         </div>
       </div>
